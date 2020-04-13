@@ -10,7 +10,6 @@
   },
   "permissions": [
     "tabs",
-    "activeTab",
     "storage"
   ],
   "background": {
