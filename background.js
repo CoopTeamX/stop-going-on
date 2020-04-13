@@ -6,7 +6,10 @@ chrome.tabs.onUpdated.addListener(
         if(domain !== previousDomain) {
             const list = getExistingList();
             if(list.includes(domain) > 0) {
-                alert("Are you sure you don't want to do anything else? ;-)");
+                const quit = confirm("Hey, maybe we should go somewhere else? We quit? ;-)");
+                if(quit) {
+                    chrome.tabs.remove(tab.id, function() { });
+                }
             }
         }
         save('previous-domain', domain);
