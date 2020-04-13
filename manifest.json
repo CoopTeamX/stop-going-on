@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+
+  "name": "Stop Going On!",
+  "description": "Simple Chrome extension reminding you to stop going on a list of websites you wrote.",
+  "version": "1.0",
+  "browser_action": {
+    "default_icon": "favicon-32x32.png",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "storage"
+  ],
+  "background": {
+    "scripts": [
+      "utils.js",
+      "background.js"
+    ],
+    "persistent": false
+  }
+}
